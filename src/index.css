@@ -6,6 +6,12 @@
   --font-family: 'Ubuntu', sans-serif;
 }
 
+dark:root{
+  --bg-content: #212121;
+  --color: #fff;
+  --font-family: 'Ubuntu', sans-serif;
+}
+
 
 body{
   margin: 0;
