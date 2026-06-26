@@ -57,7 +57,7 @@ export const HeaderLink: FC<IHeaderLinkProps> = (props) => {
 
 	return (
 		<Link
-			className={`text-zinc-300 hover:text-white transition-colors ${className || ''}`}
+			className={`text-muted-foreground hover:text-foreground transition-colors ${className || ''}`}
 			{...rest}>
 			{children}
 		</Link>
@@ -102,7 +102,7 @@ const Header: FC<IHeaderProps> = (props) => {
 			<header
 				ref={divRef}
 				data-component-name='Header'
-				className={`sticky top-0 z-40 flex justify-between gap-4 border-b border-zinc-300/25 bg-[#ffffffa3] dark:bg-zinc-900/75 p-6 backdrop-blur-md dark:border-zinc-800/50 dark:text-white ${className}`}
+				className={`sticky top-0 z-40 flex justify-between gap-4 border-b border-border bg-header/75 text-header-foreground p-6 backdrop-blur-md ${className}`}
 				{...rest}>
 				{children}
 			</header>

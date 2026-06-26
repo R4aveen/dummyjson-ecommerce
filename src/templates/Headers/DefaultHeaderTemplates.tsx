@@ -1,11 +1,12 @@
 import pagesConfig from "@/config/page.config";
 import Header, { HeaderContent, HeaderLeft, HeaderRight, HeaderLink } from "@/components/layouts/Header/Header";
+import { ThemeToggle } from "@/components/ui";
 
 const DefaultHeaderTemplates = () => {
   return (
-    <Header className="flex-wrap bg-black md:flex-nowrap">
+    <Header className="flex-wrap md:flex-nowrap">
         <HeaderLeft className="w-full md:w-auto">
-            <p className="text-white font-bold">Logo</p>
+            <p className="font-bold text-primary">Logo</p>
         </HeaderLeft>
         <HeaderContent className="w-full md:w-auto flex gap-4">
             <HeaderLink to={pagesConfig.homePage.to} id={pagesConfig.homePage.id}>
@@ -17,7 +18,8 @@ const DefaultHeaderTemplates = () => {
             </HeaderLink>
         </HeaderContent>
         <HeaderRight className="w-full md:w-auto">
-            <p className="text-white">User</p>
+            <ThemeToggle />
+            <p>User</p>
         </HeaderRight>
     </Header>
   )
