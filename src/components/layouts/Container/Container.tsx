@@ -23,7 +23,8 @@ export const Container: FC<IContainerProps> = (props) => {
   return (
     <div
       data-component-name="layouts/Container"
-      className={cn("mx-auto w-full px-4 sm:px-6 lg:px-8", sizes[size], className)}
+      // className={cn("mx-auto w-full px-4 sm:px-6 lg:px-8", sizes[size], className)}
+      className={cn("mx-auto w-full", sizes[size], className)}
       {...rest}
     >
       {children}
