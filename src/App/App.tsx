@@ -1,12 +1,15 @@
 import { HeaderRouter } from "@/components/router/headerRouter"
 import { ContentRouter } from "@/components/router/contentRouter"
+import { Wraper } from "@/components/layouts"
 
 function App() {
 
   return (
     <>
       <HeaderRouter />
-      <ContentRouter />
+      <Wraper>
+        <ContentRouter />
+      </Wraper>
     </>
   )
 }

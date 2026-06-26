@@ -1,9 +1,12 @@
+import { PageWraper, Container } from "@/components/layouts";
 
 const HomePage = () => {
     return (
-        <section>
-            <h1>Home</h1>
-        </section>
+        <PageWraper name="Home Page" title="Home Page">
+            <Container>
+                <h1 className="text-2xl font-bold">Home</h1>
+            </Container>
+        </PageWraper>
     )
 }
 
