@@ -1,29 +1,29 @@
-
-
 export interface PageConfig {
   id: string;
   to: string;
   text: string;
-  icon: string;
-  subPages?: Record<string, PageConfig>;
 }
 
-export const authPages = {
+export const pagesConfig = {
   homePage: {
-    id: 'homepage',
-    to: '/',
-    text: 'Home',
-    icon: '',
+    id: "homePage",
+    to: "/",
+    text: "Inicio",
   },
   shopPage: {
-    id: 'shopPage',
-    to: '/shop',
-    text: 'Shop',
-    icon: '',
+    id: "shopPage",
+    to: "/shop",
+    text: "Tienda",
+  },
+  productPage: {
+    id: "productPage",
+    to: "/shop/:productId",
+    text: "Producto",
   },
 } satisfies Record<string, PageConfig>;
 
+export function getProductPath(productId: number | string): string {
+  return pagesConfig.productPage.to.replace(":productId", String(productId));
+}
 
-
-export const pagesConfig = {...authPages};
 export default pagesConfig;

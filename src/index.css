@@ -1,15 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 @import "tailwindcss";
 
-:root {
-  --bg-content: #e9e9e9;
-  --color: #4c5552;
-  --font-family: 'Ubuntu', sans-serif;
+@theme {
+  --font-sans: "Ubuntu", ui-sans-serif, system-ui, sans-serif;
+  --color-accent: #863bff;
+  --color-canvas: #f1f1ef;
+  --color-ink: #262b2a;
 }
 
-
-body{
+body {
   margin: 0;
-  padding: 0;
-  color: var(--color);
-  background-color: var(--bg-content);
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
 }
