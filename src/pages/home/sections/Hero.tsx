@@ -5,7 +5,7 @@ import { useProducts } from "@/hooks/useProducts";
 import { formatPrice, getOriginalPrice } from "@/utils/format";
 
 export const Hero = () => {
-  const { products } = useProducts({ sortBy: "rating", order: "desc", limit: 3 });
+  const { products, loading } = useProducts({ sortBy: "rating", order: "desc", limit: 3 });
   const [featured, secondary] = products;
   const featuredHasDiscount = featured && featured.discountPercentage >= 5;
 
@@ -107,9 +107,9 @@ export const Hero = () => {
                 </div>
               )}
             </Link>
-          ) : (
+          ) : loading ? (
             <div className="aspect-square w-full animate-pulse rounded-3xl bg-white/10" />
-          )}
+          ) : null}
         </div>
       </div>
     </section>
