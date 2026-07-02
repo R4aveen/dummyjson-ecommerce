@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useCart } from "@/context/CartContext";
 import { XIcon, PlusIcon, MinusIcon, TrashIcon, ShoppingBagIcon } from "@/components/ui/Icons";
 import { formatPrice } from "@/utils/format";
+import { Button, Card } from "@/components/ui";
 
 export const CartDrawer = () => {
   const {
@@ -60,13 +61,15 @@ export const CartDrawer = () => {
             <ShoppingBagIcon className="h-5 w-5 text-accent" />
             Tu Carrito
           </h2>
-          <button
+          <Button
+            variant="ghost"
+            size="icon"
             onClick={() => setIsCartOpen(false)}
-            className="rounded-full p-2 text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-600"
+            className="rounded-full text-slate-400 hover:bg-slate-100 hover:text-slate-600"
             aria-label="Cerrar carrito"
           >
             <XIcon className="h-5 w-5" />
-          </button>
+          </Button>
         </div>
 
         <div className="flex-1 overflow-y-auto px-6 py-4">
@@ -79,19 +82,20 @@ export const CartDrawer = () => {
               <p className="mt-2 text-sm text-slate-400 max-w-240px">
                 Explora nuestra tienda y añade productos para verlos aquí.
               </p>
-              <button
+              <Button
+                variant="primary"
                 onClick={() => setIsCartOpen(false)}
-                className="mt-6 rounded-full bg-accent px-6 py-2.5 text-sm font-semibold text-white transition-all shadow-md hover:bg-accent/90 hover:scale-105"
+                className="mt-6 rounded-full px-6 py-2.5 text-sm font-semibold shadow-md hover:scale-105 transition-transform"
               >
                 Seguir comprando
-              </button>
+              </Button>
             </div>
           ) : (
             <div className="space-y-4">
               {cartItems.map((item) => (
-                <div
+                <Card
                   key={item.product.id}
-                  className="flex gap-4 rounded-2xl border border-slate-100 p-4 transition-shadow hover:shadow-xs"
+                  className="flex flex-row gap-4 p-4 border-slate-100 shadow-none hover:shadow-xs transition-shadow rounded-2xl bg-white"
                 >
                   <img
                     src={item.product.thumbnail}
@@ -110,34 +114,40 @@ export const CartDrawer = () => {
                         {formatPrice(item.product.price)}
                       </span>
                       <div className="flex items-center gap-1.5 rounded-full bg-slate-50 p-1 border border-slate-200/60">
-                        <button
+                        <Button
+                          variant="ghost"
+                          size="icon"
                           onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
-                          className="rounded-full p-1 text-slate-500 transition-colors hover:bg-slate-200"
+                          className="h-6 w-6 rounded-full p-0 text-slate-500 hover:bg-slate-200"
                           aria-label="Disminuir cantidad"
                         >
                           <MinusIcon className="h-3 w-3" />
-                        </button>
+                        </Button>
                         <span className="w-6 text-center text-xs font-semibold text-slate-700">
                           {item.quantity}
                         </span>
-                        <button
+                        <Button
+                          variant="ghost"
+                          size="icon"
                           onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-                          className="rounded-full p-1 text-slate-500 transition-colors hover:bg-slate-200"
+                          className="h-6 w-6 rounded-full p-0 text-slate-500 hover:bg-slate-200"
                           aria-label="Aumentar cantidad"
                         >
                           <PlusIcon className="h-3 w-3" />
-                        </button>
+                        </Button>
                       </div>
                     </div>
                   </div>
-                  <button
+                  <Button
+                    variant="ghost"
+                    size="icon"
                     onClick={() => removeFromCart(item.product.id)}
-                    className="self-start rounded-full p-1.5 text-slate-400 transition-colors hover:bg-red-50 hover:text-red-500"
+                    className="self-start rounded-full text-slate-400 hover:bg-red-50 hover:text-red-500 h-8 w-8 p-0"
                     aria-label="Eliminar producto"
                   >
                     <TrashIcon className="h-4 w-4" />
-                  </button>
-                </div>
+                  </Button>
+                </Card>
               ))}
             </div>
           )}
@@ -153,18 +163,20 @@ export const CartDrawer = () => {
               Gastos de envío e impuestos calculados en el checkout.
             </p>
             <div className="flex flex-col gap-2">
-              <button
-                className="w-full rounded-xl bg-accent py-3 text-sm font-semibold text-white transition-all shadow-md shadow-accent/20 hover:bg-accent/90 hover:scale-[1.01]"
+              <Button
+                variant="primary"
+                className="w-full rounded-xl py-3 text-sm font-semibold shadow-md shadow-accent/20 hover:scale-[1.01] transition-transform"
                 onClick={() => alert("¡Funcionalidad de Checkout en desarrollo!")}
               >
                 Proceder al pago
-              </button>
-              <button
+              </Button>
+              <Button
+                variant="ghost"
                 onClick={clearCart}
-                className="w-full rounded-xl py-2 text-xs font-medium text-slate-400 hover:text-red-500 hover:bg-red-50/50 transition-colors"
+                className="w-full rounded-xl py-2 text-xs font-medium text-slate-400 hover:text-red-500 hover:bg-red-50/50"
               >
                 Vaciar carrito
-              </button>
+              </Button>
             </div>
           </div>
         )}

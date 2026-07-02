@@ -4,8 +4,21 @@
 @theme {
   --font-sans: "Ubuntu", ui-sans-serif, system-ui, sans-serif;
   --color-accent: #863bff;
+  --color-accent-foreground: #ffffff;
   --color-canvas: #f1f1ef;
   --color-ink: #262b2a;
+
+  --color-primary: #863bff;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #e2e8f0;
+  --color-secondary-foreground: #1e293b;
+  --color-border: #cbd5e1;
+  --color-card: #ffffff;
+  --color-card-foreground: #1e293b;
+  --color-muted-foreground: #64748b;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --radius-base: 0.75rem;
 }
 
 body {

@@ -8,6 +8,7 @@ import pagesConfig from "@/config/page.config";
 import { useProduct } from "@/hooks/useProduct";
 import { formatDate, formatPrice, getOriginalPrice } from "@/utils/format";
 import { useCart } from "@/context/CartContext";
+import { Button } from "@/components/ui";
 
 const ProductDetailPage = () => {
   const { productId } = useParams();
@@ -84,18 +85,14 @@ const ProductDetailPage = () => {
           <p className={`text-sm font-medium ${inStock ? "text-emerald-600" : "text-red-600"}`}>
             {inStock ? `${product.availabilityStatus} · ${product.stock} unidades` : "Sin stock"}
           </p>
-          <button
+          <Button
             onClick={() => inStock && addToCart(product)}
             disabled={!inStock}
-            className={`mt-2 w-full flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all ${
-              inStock
-                ? "bg-slate-900 text-white hover:bg-slate-800 active:scale-[0.99] cursor-pointer shadow-sm"
-                : "bg-slate-100 text-slate-400 cursor-not-allowed"
-            }`}
+            className="mt-2 w-full rounded-xl py-3 text-sm font-semibold hover:opacity-90 active:scale-[0.99] transition-transform shadow-sm"
           >
             <ShoppingBagIcon className="h-5 w-5" />
             {inStock ? "Añadir al carrito" : "Agotado"}
-          </button>
+          </Button>
           <ul className="mt-2 space-y-2 rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-600">
             <li>
               <span className="font-semibold">Envío:</span> {product.shippingInformation}

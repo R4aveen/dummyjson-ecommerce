@@ -5,6 +5,7 @@ import type { Product } from "@/types/product";
 import { formatPrice, getOriginalPrice } from "@/utils/format";
 import { useCart } from "@/context/CartContext";
 import { ShoppingBagIcon } from "@/components/ui/Icons";
+import { Button } from "@/components/ui";
 
 interface ProductCardProps {
   product: Product;
@@ -54,13 +55,13 @@ export const ProductCard = ({ product }: ProductCardProps) => {
             </span>
           )}
         </div>
-        <button
+        <Button
           onClick={handleAddToCart}
-          className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 py-2.5 text-xs font-semibold text-white transition-all hover:bg-slate-800 active:scale-[0.98]"
+          className="mt-3 w-full rounded-xl py-2.5 text-xs font-semibold hover:opacity-90 active:scale-[0.98] transition-transform"
         >
           <ShoppingBagIcon className="h-4 w-4" />
           Añadir al carrito
-        </button>
+        </Button>
       </div>
     </div>
   );
