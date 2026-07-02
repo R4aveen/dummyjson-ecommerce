@@ -108,6 +108,10 @@ Scripts disponibles:
 
 ![Detalle de producto](docs/screenshots/product.png)
 
+### Vista mobile (responsivo)
+
+<img src="docs/screenshots/mobile.png" alt="Vista mobile de la aplicación" width="320" />
+
 ---
 
 Proyecto educativo sin fines comerciales — Diplomado Full Stack, Módulo 2.

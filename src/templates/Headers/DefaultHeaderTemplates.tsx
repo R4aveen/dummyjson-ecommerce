@@ -9,14 +9,14 @@ const DefaultHeaderTemplates = () => {
   const { cartCount, setIsCartOpen } = useCart();
 
   return (
-    <Header className="flex-wrap md:flex-nowrap items-center justify-between">
-      <HeaderLeft className="w-full md:w-auto">
+    <Header>
+      <HeaderLeft>
         <Link to={pagesConfig.homePage.to} className="flex items-center gap-2">
           <img src="/favicon.svg" alt="Logo de Voltio" className="h-7 w-7" />
-          <span className="text-xl font-bold tracking-tight text-foreground">Voltio</span>
+          <span className="text-lg font-bold tracking-tight text-foreground sm:text-xl">Voltio</span>
         </Link>
       </HeaderLeft>
-      <HeaderContent className="w-full md:w-auto flex gap-4">
+      <HeaderContent className="gap-4 text-sm sm:gap-6 sm:text-base">
         <HeaderLink to={pagesConfig.homePage.to} id={pagesConfig.homePage.id}>
           {pagesConfig.homePage.text}
         </HeaderLink>
@@ -25,7 +25,7 @@ const DefaultHeaderTemplates = () => {
           {pagesConfig.shopPage.text}
         </HeaderLink>
       </HeaderContent>
-      <HeaderRight className="w-full md:w-auto flex items-center gap-4">
+      <HeaderRight>
         <ThemeToggle />
         <div className="h-6 w-px bg-border" />
         <button

@@ -1,6 +1,7 @@
 import { useRef, type FC, type HTMLAttributes, type ReactNode } from "react";
 import { Link, type LinkProps } from "react-router-dom";
 import { useDomRect } from "@/hooks/useDomRect";
+import { cn } from "@/lib/cn";
 
 
 interface IHeaderLeftProps extends HTMLAttributes<HTMLDivElement> {
@@ -14,13 +15,8 @@ export const HeaderLeft: FC<IHeaderLeftProps> = (props) => {
 	return (
 		<div
 			data-component-name='Header/HeaderLeft'
-			className={'flex items-center gap-4 ltr:md:mr-auto rtl:md:ml-auto'}
+			className={cn('flex items-center gap-4', className)}
 			{...rest}>
-			<button
-				type='button'
-				aria-label='Toggle Aside Menu'
-				className='flex h-12 w-12 items-center justify-center md:hidden'>
-			</button>
 			{children}
 		</div>
 	);
@@ -76,7 +72,7 @@ export const HeaderRight: FC<IHeaderRightProps> = (props) => {
 	return (
 		<div
 			data-component-name='Header/HeaderRight'
-			className={'flex items-center gap-4 ltr:md:ml-auto rtl:md:mr-auto'}
+			className={cn('flex items-center gap-2 sm:gap-4', className)}
 			{...rest}>
 			{children}
 		</div>
@@ -102,7 +98,7 @@ const Header: FC<IHeaderProps> = (props) => {
 			<header
 				ref={divRef}
 				data-component-name='Header'
-				className={`sticky top-0 z-40 flex justify-between gap-4 border-b border-border bg-header/75 text-header-foreground p-6 backdrop-blur-md ${className}`}
+				className={cn('sticky top-0 z-40 flex items-center justify-between gap-3 border-b border-border bg-header/75 text-header-foreground px-4 py-3 backdrop-blur-md sm:gap-4 sm:px-6 sm:py-4', className)}
 				{...rest}>
 				{children}
 			</header>
