@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { useTheme } from "@/context/ThemeContext";
 import { Button, type ButtonSize, type ButtonVariant } from "@/components/ui/Button";
+import { SunIcon, MoonIcon } from "@/components/ui/Icons";
 
 interface IThemeToggleProps {
   variant?: ButtonVariant;
@@ -22,9 +23,7 @@ export const ThemeToggle: FC<IThemeToggleProps> = (props) => {
       aria-label={isDark ? "Activar modo claro" : "Activar modo oscuro"}
       title={isDark ? "Modo claro" : "Modo oscuro"}
     >
-      <span aria-hidden="true" className="text-base leading-none hover:cursor-pointer">
-        {isDark ? "☀️" : "🌙"}
-      </span>
+      {isDark ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
     </Button>
   );
 };

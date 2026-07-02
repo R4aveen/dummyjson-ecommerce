@@ -4,66 +4,67 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  /* Paleta sage: #466A5A primary · #547265 accent · #DBD1D0 neutro cálido · #EEEBF4 fondo */
+  --background: #eeebf4;
+  --foreground: #24332d;
 
   --header: #ffffff;
-  --header-foreground: #0f172a;
+  --header-foreground: #24332d;
 
   --card: #ffffff;
-  --card-foreground: #0f172a;
+  --card-foreground: #24332d;
 
-  --primary: #863bff;
+  --primary: #466a5a;
   --primary-foreground: #ffffff;
 
-  --secondary: #f1f5f9;
-  --secondary-foreground: #0f172a;
+  --secondary: #dbd1d0;
+  --secondary-foreground: #3a3330;
 
-  --accent: #863bff;
+  --accent: #547265;
   --accent-foreground: #ffffff;
 
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
+  --muted: #e6e2e5;
+  --muted-foreground: #6e7c75;
 
-  --destructive: #ef4444;
+  --destructive: #c0483c;
   --destructive-foreground: #ffffff;
 
-  --border: #e2e8f0;
-  --input: #f1f5f9;
-  --ring: #863bff;
+  --border: #dad4d6;
+  --input: #e6e2e5;
+  --ring: #466a5a;
 
   --radius: 0.75rem;
   --font-sans: "Ubuntu", ui-sans-serif, system-ui, sans-serif;
 }
 
 .dark {
-  --background: #0f172a;
-  --foreground: #f8fafc;
+  --background: #1a2621;
+  --foreground: #eeebf4;
 
-  --header: #1e293b;
-  --header-foreground: #f8fafc;
+  --header: #22322b;
+  --header-foreground: #eeebf4;
 
-  --card: #1e293b;
-  --card-foreground: #f8fafc;
+  --card: #22322b;
+  --card-foreground: #eeebf4;
 
-  --primary: #a78bfa;
-  --primary-foreground: #0f172a;
+  --primary: #7fa595;
+  --primary-foreground: #12201a;
 
-  --secondary: #334155;
-  --secondary-foreground: #f8fafc;
+  --secondary: #33453d;
+  --secondary-foreground: #eeebf4;
 
-  --accent: #a78bfa;
-  --accent-foreground: #0f172a;
+  --accent: #8fb3a3;
+  --accent-foreground: #12201a;
 
-  --muted: #334155;
-  --muted-foreground: #94a3b8;
+  --muted: #2d3d36;
+  --muted-foreground: #9eaba5;
 
-  --destructive: #f87171;
-  --destructive-foreground: #ffffff;
+  --destructive: #e06a5f;
+  --destructive-foreground: #1a2621;
 
-  --border: #334155;
-  --input: #334155;
-  --ring: #a78bfa;
+  --border: #33453d;
+  --input: #2d3d36;
+  --ring: #7fa595;
 }
 
 @theme inline {

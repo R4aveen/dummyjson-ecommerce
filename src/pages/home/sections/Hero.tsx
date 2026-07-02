@@ -3,7 +3,7 @@ import { ArrowRightIcon } from "@/components/ui/Icons";
 import pagesConfig from "@/config/page.config";
 
 export const Hero = () => (
-  <section className="bg-gradient-to-br from-accent via-violet-600 to-indigo-700 text-white">
+  <section className="bg-gradient-to-br from-primary via-accent to-[#2b4038] text-white">
     <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 py-20 sm:px-6 sm:py-28">
       <span className="rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-wider">
         Nueva temporada
