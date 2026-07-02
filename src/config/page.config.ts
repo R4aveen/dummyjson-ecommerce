@@ -20,6 +20,11 @@ export const pagesConfig = {
     to: "/shop/:productId",
     text: "Producto",
   },
+  checkoutPage: {
+    id: "checkoutPage",
+    to: "/checkout",
+    text: "Pagar",
+  },
 } satisfies Record<string, PageConfig>;
 
 export function getProductPath(productId: number | string): string {

@@ -10,3 +10,4 @@ export {
 export { Input } from "./Input";
 export { Badge, type BadgeVariant } from "./Badge";
 export { ThemeToggle } from "./ThemeToggle";
+export { Loader } from "./Loader";
