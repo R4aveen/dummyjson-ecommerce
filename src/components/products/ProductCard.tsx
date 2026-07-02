@@ -19,6 +19,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
     e.preventDefault();
     e.stopPropagation();
     addToCart(product);
+    
   };
 
   return (
