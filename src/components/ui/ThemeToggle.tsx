@@ -22,7 +22,7 @@ export const ThemeToggle: FC<IThemeToggleProps> = (props) => {
       aria-label={isDark ? "Activar modo claro" : "Activar modo oscuro"}
       title={isDark ? "Modo claro" : "Modo oscuro"}
     >
-      <span aria-hidden="true" className="text-base leading-none">
+      <span aria-hidden="true" className="text-base leading-none hover:cursor-pointer">
         {isDark ? "☀️" : "🌙"}
       </span>
     </Button>
