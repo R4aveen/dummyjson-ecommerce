@@ -13,11 +13,11 @@ export const CategoryShowcase = () => {
       <div className="mb-6 flex items-end justify-between">
         <div>
           <h2 className="text-2xl font-bold sm:text-3xl">Explora por categoría</h2>
-          <p className="mt-1 text-sm text-slate-500">Encuentra lo que necesitas más rápido.</p>
+          <p className="mt-1 text-sm text-muted-foreground">Encuentra lo que necesitas más rápido.</p>
         </div>
         <Link
           to={pagesConfig.shopPage.to}
-          className="hidden items-center gap-1 text-sm font-medium text-accent hover:underline sm:inline-flex"
+          className="hidden items-center gap-1 text-sm font-medium text-primary hover:underline sm:inline-flex"
         >
           Ver todas
           <ArrowRightIcon className="h-4 w-4" />
@@ -31,10 +31,10 @@ export const CategoryShowcase = () => {
             <li key={category.slug}>
               <Link
                 to={`${pagesConfig.shopPage.to}?category=${category.slug}`}
-                className="group flex items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-sm font-medium transition-colors hover:border-accent hover:text-accent"
+                className="group flex items-center justify-between rounded-xl border border-border bg-card px-4 py-3.5 text-sm font-medium transition-colors hover:border-primary hover:text-primary"
               >
                 {category.name}
-                <ArrowRightIcon className="h-4 w-4 text-slate-300 transition-colors group-hover:text-accent" />
+                <ArrowRightIcon className="h-4 w-4 text-muted-foreground/60 transition-colors group-hover:text-primary" />
               </Link>
             </li>
           ))}

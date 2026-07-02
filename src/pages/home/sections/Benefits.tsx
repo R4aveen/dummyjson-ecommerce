@@ -27,13 +27,13 @@ export const Benefits = () => (
   <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
     <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {benefits.map(({ title, description, icon: Icon }) => (
-        <li key={title} className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5">
-          <span className="rounded-xl bg-accent/10 p-2.5 text-accent">
+        <li key={title} className="flex items-start gap-4 rounded-2xl border border-border bg-card text-card-foreground p-5">
+          <span className="rounded-xl bg-primary/10 p-2.5 text-primary">
             <Icon className="h-6 w-6" />
           </span>
           <div>
             <h3 className="font-semibold">{title}</h3>
-            <p className="mt-1 text-sm text-slate-500">{description}</p>
+            <p className="mt-1 text-sm text-muted-foreground">{description}</p>
           </div>
         </li>
       ))}

@@ -74,7 +74,7 @@ const ShopPage = () => {
       <Container className="py-10">
         <div className="mb-8">
           <h1 className="text-3xl font-bold">Catálogo</h1>
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 text-sm text-muted-foreground">
             {loading ? "Buscando productos..." : `${total} productos disponibles`}
           </p>
         </div>
@@ -84,11 +84,11 @@ const ShopPage = () => {
             value={category}
             onChange={(event) => handleCategoryChange(event.target.value)}
             aria-label="Filtrar por categoría"
-            className="rounded-full border border-slate-300 bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent/20 sm:w-56"
+            className="rounded-full border border-border bg-card text-card-foreground px-4 py-2.5 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 sm:w-56"
           >
-            <option value="">Todas las categorías</option>
+            <option value="" className="bg-card text-card-foreground">Todas las categorías</option>
             {categories.map((item) => (
-              <option key={item.slug} value={item.slug}>
+              <option key={item.slug} value={item.slug} className="bg-card text-card-foreground">
                 {item.name}
               </option>
             ))}
@@ -105,18 +105,18 @@ const ShopPage = () => {
                   type="button"
                   onClick={() => goToPage(page - 1)}
                   disabled={page <= 1}
-                  className="rounded-full border border-slate-300 bg-white px-5 py-2 text-sm font-medium transition-colors hover:border-accent hover:text-accent disabled:pointer-events-none disabled:opacity-40"
+                  className="rounded-full border border-border bg-card text-card-foreground px-5 py-2 text-sm font-medium transition-colors hover:border-primary hover:text-primary disabled:pointer-events-none disabled:opacity-40"
                 >
                   Anterior
                 </button>
-                <span className="text-sm text-slate-500">
+                <span className="text-sm text-muted-foreground">
                   Página {page} de {totalPages}
                 </span>
                 <button
                   type="button"
                   onClick={() => goToPage(page + 1)}
                   disabled={page >= totalPages}
-                  className="rounded-full border border-slate-300 bg-white px-5 py-2 text-sm font-medium transition-colors hover:border-accent hover:text-accent disabled:pointer-events-none disabled:opacity-40"
+                  className="rounded-full border border-border bg-card text-card-foreground px-5 py-2 text-sm font-medium transition-colors hover:border-primary hover:text-primary disabled:pointer-events-none disabled:opacity-40"
                 >
                   Siguiente
                 </button>

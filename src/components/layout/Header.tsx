@@ -45,7 +45,7 @@ export const Header = () => {
           >
             <ShoppingBagIcon className="h-6 w-6" />
             {cartCount > 0 && (
-              <Badge className="absolute -right-0.5 -top-0.5 flex h-5 min-w-[20px] items-center justify-center rounded-full px-1 text-[10px] font-bold ring-2 ring-white animate-in zoom-in-50 duration-200">
+              <Badge className="absolute -right-0.5 -top-0.5 flex h-5 min-w-5 items-center justify-center rounded-full px-1 text-[10px] font-bold ring-2 ring-white animate-in zoom-in-50 duration-200">
                 {cartCount}
               </Badge>
             )}

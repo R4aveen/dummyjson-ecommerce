@@ -27,15 +27,15 @@ const DefaultHeaderTemplates = () => {
       </HeaderContent>
       <HeaderRight className="w-full md:w-auto flex items-center gap-4">
         <ThemeToggle />
-        <div className="h-6 w-px bg-slate-200" />
+        <div className="h-6 w-px bg-border" />
         <button
           onClick={() => setIsCartOpen(true)}
-          className="hover:cursor-pointer relative rounded-full p-2 text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900"
+          className="hover:cursor-pointer relative rounded-full p-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
           aria-label="Abrir carrito"
         >
           <ShoppingBagIcon className="h-6 w-6" />
           {cartCount > 0 && (
-            <Badge className="absolute -right-0.5 -top-0.5 flex h-5 min-w-[20px] items-center justify-center rounded-full px-1 text-[10px] font-bold ring-2 ring-white animate-in zoom-in-50 duration-200">
+            <Badge className="absolute -right-0.5 -top-0.5 flex h-5 min-w-[20px] items-center justify-center rounded-full px-1 text-[10px] font-bold ring-2 ring-header animate-in zoom-in-50 duration-200">
               {cartCount}
             </Badge>
           )}
